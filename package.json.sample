@@ -31,8 +31,8 @@
   },
   "scripts": {
     "preinstall": "npm install -g gulp gulp-shell babel browserify watchify",
+    "watch": "gulp watch",
     "start": "NODE_ENV=development NODE_PATH=gulp"
-    "watch": "gulp watch"
   },
   "preferGlobal": true,
   "author": "kobabasu",

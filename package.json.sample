@@ -30,9 +30,10 @@
     "parser": "babel-eslint"
   },
   "scripts": {
-    "preinstall": "npm install -g gulp gulp-shell babel browserify watchify",
+    "preinstall": "npm install -g gulp gulp-shell babel babel-eslint browserify watchify",
+    "watch": "gulp watch",
+    "clean:git" "find . -type d -name .git -print0 | xargs -0 rm -fr",
     "start": "NODE_ENV=development NODE_PATH=gulp"
-    "watch": "gulp watch"
   },
   "preferGlobal": true,
   "author": "kobabasu",

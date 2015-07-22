@@ -1,9 +1,12 @@
 # micro-gulp
 容量節約のため、gulp, run-sequenceなど  
-必須なもの以外はnpm globalを利用
+必須なもの以外はnpm globalを利用  
+現在のディレクトリに展開させたいためcloneは以下
 
 ```
-hub clone kobabasu/micro-gulp ./
+git init
+git remote add git@github.com-kobabasu:kobabasu/micro-gulp.git
+git fetch origin
 ```
 
 ## npm

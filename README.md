@@ -12,8 +12,7 @@ git fetch origin
 ## npm
 1. 必要があればdevelopブランチを使う  
    `git checkout develop`
-1. package.json.sampleを確認。流用する場合はリネーム  
-   `mv package.json.sample package.json`
+1. package.jsonを確認  
 1. `npm install`
 
 ## gulp

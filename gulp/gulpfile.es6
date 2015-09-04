@@ -5,13 +5,6 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
 import seq   from 'run-sequence';
 
 const path = {
-  src:  './src',
-  js:   './src/sample/js',
-  dist: './src/sample/dist',
-  sass: './sass'
-}
-
-const path = {
   api:  './api',
   src:  './src',
   js:   './js',

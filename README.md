@@ -5,23 +5,25 @@
 
 ```
 git init
-git remote add git@github.com-kobabasu:kobabasu/micro-gulp.git
+git remote add origin git@github.com-kobabasu:kobabasu/micro-gulp.git
 git fetch origin
 ```
 
 ## npm
 1. 必要があればdevelopブランチを使う  
    `git checkout develop`
-1. package.jsonを確認  
+1. package.jsonを確認 
+1. micro-sassのREADME.mdを確認しながらpackage.jsonを編集
+1. micro-fluxのREADME.mdを確認しながらpackage.jsonを編集
+1. `npm setup`
 1. `npm install`
+1. `npm run watch`
 
 ## gulp
 1. babel, browserify(watchify)がsampleで用意
 1. src, sampleディレクトリがあることが前提
-1. `npm run watch`
 
 ## check
 1. `npm run watch`が動いている前提
-1. src/ディレクトリ内のファイルを編集
-1. http://localhost:8080/src/sampleで確認  
-   もしくは`open sample/index.html -a Google\ Chrome`
+1. `gulp watch`を実行
+1. `gulp watch:sass`を実行

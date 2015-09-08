@@ -68,7 +68,7 @@ gulp.task('watch:sass', shell.task([`
   sass -w --no-cache --sourcemap=file ${path.sass}/style.sass:${path.css}/style.css
 `]));
 
-gulp.task('watch', done => seq('watch:js', 'watchify', 'watch:sass', done));
+gulp.task('watch', done => seq('watch:src', 'watchify', done));
 
 gulp.task('test', done => seq('karma', done));
 

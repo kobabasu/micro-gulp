@@ -58,7 +58,7 @@ gulp.task('e2e', shell.task([`
   protractor ${path.e2e}/protractor.conf.js
 `]));
 
-gulp.task('watch:js', ['babel'], () => {
+gulp.task('watch:src', ['babel'], () => {
   gulp
     .watch([`${path.src}/**/*.*`, `!${path.js}/**/*`, `!${path.dist}/**/*`], ['babel'])
     .on('error', err => process.exit(1));
@@ -68,10 +68,10 @@ gulp.task('watch:sass', shell.task([`
   sass -w --no-cache --sourcemap=file ${path.sass}/style.sass:${path.css}/style.css
 `]));
 
-gulp.task('watch', done => seq('watch:js', 'watchify', 'watch:sass', done));
+gulp.task('watch', done => seq('watch:src', 'watchify', done));
 
 gulp.task('test', done => seq('karma', done));
 
 gulp.task('docs', done => seq('docs:sass', 'docs:pages', 'docs:layouts', done));
 
-gulp.task('build', done => seq('babel', 'browserify', done));
+gulp.task('build', done => seq('babel', 'browserify', 'sass', 'docs', done));

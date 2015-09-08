@@ -58,7 +58,7 @@ gulp.task('e2e', shell.task([`
   protractor ${path.e2e}/protractor.conf.js
 `]));
 
-gulp.task('watch:js', ['babel'], () => {
+gulp.task('watch:src', ['babel'], () => {
   gulp
     .watch([`${path.src}/**/*.*`, `!${path.js}/**/*`, `!${path.dist}/**/*`], ['babel'])
     .on('error', err => process.exit(1));

@@ -36,6 +36,10 @@ gulp.task('sass', shell.task([`
   sass --no-cache --sourcemap=file ${path.sass}/style.sass:${path.css}/style.css
 `]));
 
+gulp.task('sass:min', shell.task([`
+  sass --no-cache --sourcemap=file ${path.sass}/style.sass:${path.css}/style.css --style compressed
+`]));
+
 gulp.task('docs:sass', shell.task([`
   styledocco -n 'css reference' -o ${path.docs}/sass --preprocessor 'sass' ${path.sass}/*.sass ${path.sass}/*.scss ${path.sass}/**/*.sass
 `]));
@@ -74,4 +78,4 @@ gulp.task('test', done => seq('karma', done));
 
 gulp.task('docs', done => seq('docs:sass', 'docs:pages', 'docs:layouts', done));
 
-gulp.task('build', done => seq('babel', 'browserify', 'sass', 'docs', done));
+gulp.task('build', done => seq('babel', 'browserify', 'sass:min', 'docs', done));

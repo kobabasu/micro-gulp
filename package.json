@@ -25,6 +25,8 @@
     "gulp": "*",
     "run-sequence": "*",
 
+    "protractor": "*",
+
     "react": "*",
     "react-router": "1.0.0-beta3",
     "react-document-title": "*",
@@ -41,7 +43,8 @@
 
   "scripts": {
     "setup": "mkdir ./{js,dist,css,docs,img}; touch index.html",
-    "preinstall": "npm run setup; npm install -g gulp gulp-shell babel babel-eslint browserify watchify bower styledocco",
+    "preinstall": "npm run setup; npm install -g gulp gulp-shell babel babel-eslint browserify watchify bower styledocco protractor",
+    "postinstall": "webdriver-manager update; node_modules/protractor/bin/webdriver-manager update;",
     "start": "NODE_ENV=development NODE_PATH=gulp",
 
     "babel": "babel ./src --out-dir ./js",

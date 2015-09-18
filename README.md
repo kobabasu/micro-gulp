@@ -32,3 +32,20 @@ git checkout master (またはdevelop)
 1. `npm run watch`が動いている前提
 1. `gulp watch`を実行
 1. `gulp watch:sass`を実行
+
+## gulp
+* `gulp babel` babelを実行
+* `gulp browserify` browserifyを実行
+* `gulp frisby` api用のfrisbyを実行
+* `gulp sass` sassフォルダをコンパイル minifyしない
+* `gulp sass:min` sassディレクトリをコンパイル minifyする
+* `gulp docs:sass` docs/sassを生成
+* `gulp docs:pages` docs/pagesを生成
+* `gulp docs:layouts` docs/layoutsを生成
+* `gulp karma` testディレクトリをkarma実行
+* `gulp e2e` e2eディレクトリをprotractor実行
+* `gulp watch:sass` sassディレクトリのみwatch, コンパイル minifyなし
+* `gulp watch` srcディレクトリのみwatch, コンパイル minifyなし
+* `gulp test` karmaを実行
+* `gulp docs` docs:sass, docs:pages, docs:layoutsを実行
+* `gulp build` src, sass, docsを実行 -minifyあり

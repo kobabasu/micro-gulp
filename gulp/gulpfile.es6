@@ -16,19 +16,19 @@ const path = {
 }
 
 gulp.task('babel', shell.task([`
-  babel ${path.src} --out-dir ${path.js}
+  babel ${path.src} --out-dir ${path.js} --presets [es2015, react]
 `]));
 
 gulp.task('browserify', shell.task([`
-  browserify ${path.js}/App.js -o ${path.dist}/build.js -v
+  browserify ${path.js}/App.js -o ${path.dist}/build.js -v -t [ babelify --presets [ es2015 react ] ]
 `]));
 
 gulp.task('watchify', shell.task([`
-  watchify ${path.js}/App.js -o ${path.dist}/build.js -v
+  watchify ${path.js}/App.js -o ${path.dist}/build.js -v -t [ babelify --presets [ es2015 react ] ]
 `]));
 
 gulp.task('frisby', shell.task([`
-  babel ${path.api}/spec/src --out-dir ${path.api}/spec/js;
+  babel ${path.test}/src --out-dir ${path.test}/spec --presets es2015;
   jasmine-node ${path.api}/spec/js
 `]));
 
@@ -53,7 +53,7 @@ gulp.task('docs:layouts', shell.task([`
 `]));
 
 gulp.task('karma', shell.task([`
-  babel ${path.test}/src --out-dir ${path.test}/spec;
+  babel ${path.test}/src --out-dir ${path.test}/spec --presets es2015;
   browserify -v ${path.test}/spec/*.js -o ${path.test}/dist/build.js;
   karma start ${path.test}/karma.conf.js
 `]));

@@ -22,13 +22,18 @@
   "dependencies": {
   },
   "devDependencies": {
+    "babel-core": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "babelify": "*",
     "gulp": "*",
     "run-sequence": "*",
 
     "protractor": "*",
 
     "react": "*",
-    "react-router": "1.0.0-beta3",
+    "react-dom": "*",
+    "react-router": "1.0.0-rc4",
     "react-document-title": "*",
     "object-assign": "*",
     "flux": "*"
@@ -47,8 +52,8 @@
     "postinstall": "webdriver-manager update; node_modules/protractor/bin/webdriver-manager update;",
     "start": "NODE_ENV=development NODE_PATH=gulp",
 
-    "babel": "babel ./src --out-dir ./js",
-    "browserify": "browserify -d --compact false ./js/app.js > ./dist/build.js",
+    "babel": "babel ./src --out-dir ./js --presets [es2015, react]",
+    "browserify": "browserify -d --compact false ./js/app.js > ./dist/build.js -t [ babelify --presets [ es2015 react ] ]",
     "watch:src": "gulp watch:src",
     "build:src": "npm run babel; npm run browserify",
 

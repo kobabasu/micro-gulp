@@ -16,7 +16,7 @@ const path = {
 }
 
 gulp.task('babel', shell.task([`
-  babel ${path.src} --out-dir ${path.js} --presets [es2015, react]
+  babel ${path.src} --out-dir ${path.js} --presets react
 `]));
 
 gulp.task('browserify', shell.task([`

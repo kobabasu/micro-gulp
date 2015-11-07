@@ -16,7 +16,7 @@ const path = {
 }
 
 gulp.task('babel', shell.task([`
-  babel ${path.src} --out-dir ${path.js} --presets [es2015, react]
+  babel ${path.src} --out-dir ${path.js} --presets react
 `]));
 
 gulp.task('browserify', shell.task([`
@@ -33,11 +33,11 @@ gulp.task('frisby', shell.task([`
 `]));
 
 gulp.task('sass', shell.task([`
-  sass --no-cache --sourcemap=file ${path.sass}/style.sass:${path.css}/style.css
+  sassc -M ${path.sass}/style.sass > ${path.css}/style.css -m ${path.css}/style.css
 `]));
 
 gulp.task('sass:min', shell.task([`
-  sass --no-cache --sourcemap=file ${path.sass}/style.sass:${path.css}/style.css --style compressed
+  sassc -t compressed -M ${path.sass}/style.sass > ${path.css}/style.min.css -m ${path.css}/style.min.css
 `]));
 
 gulp.task('docs:sass', shell.task([`
@@ -62,20 +62,24 @@ gulp.task('e2e', shell.task([`
   protractor ${path.e2e}/protractor.conf.js
 `]));
 
-gulp.task('watch:src', ['babel'], () => {
+gulp.task('watch:src', () => {
   gulp
-    .watch([`${path.src}/**/*.*`, `!${path.js}/**/*`, `!${path.dist}/**/*`], ['babel'])
+    .watch([`${path.src}/**/*.*`], ['src'])
     .on('error', err => process.exit(1));
 });
 
-gulp.task('watch:sass', shell.task([`
-  sass -w --no-cache --sourcemap=file ${path.sass}/style.sass:${path.css}/style.css
-`]));
+gulp.task('watch:sass', ['sass'], () => {
+  gulp
+    .watch([`${path.sass}/**/*.*`], ['sass'])
+    .on('error', err => process.exit(1));
+});
 
-gulp.task('watch', done => seq('watch:src', 'watchify', done));
+gulp.task('src', done => seq('babel', 'browserify', done));
+
+gulp.task('watch', ['watch:src']);
 
 gulp.task('test', done => seq('karma', done));
 
 gulp.task('docs', done => seq('docs:sass', 'docs:pages', 'docs:layouts', done));
 
-gulp.task('build', done => seq('babel', 'browserify', 'sass:min', 'docs', done));
+gulp.task('build', done => seq('src', 'sass:min', 'docs', done));

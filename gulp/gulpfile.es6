@@ -82,4 +82,4 @@ gulp.task('test', done => seq('karma', done));
 
 gulp.task('docs', done => seq('docs:sass', 'docs:pages', 'docs:layouts', done));
 
-gulp.task('build', done => seq('babel', 'browserify', 'sass:min', 'docs', done));
+gulp.task('build', done => seq('src', 'sass:min', 'docs', done));

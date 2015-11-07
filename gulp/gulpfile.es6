@@ -33,11 +33,11 @@ gulp.task('frisby', shell.task([`
 `]));
 
 gulp.task('sass', shell.task([`
-  sass --no-cache --sourcemap=file ${path.sass}/style.sass:${path.css}/style.css
+  sassc -M ${path.sass}/style.sass > ${path.css}/style.css -m ${path.css}/style.css
 `]));
 
 gulp.task('sass:min', shell.task([`
-  sass --no-cache --sourcemap=file ${path.sass}/style.sass:${path.css}/style.css --style compressed
+  sassc -t compressed -M ${path.sass}/style.sass > ${path.css}/style.min.css -m ${path.css}/style.min.css
 `]));
 
 gulp.task('docs:sass', shell.task([`
@@ -68,9 +68,13 @@ gulp.task('watch:src', ['babel'], () => {
     .on('error', err => process.exit(1));
 });
 
-gulp.task('watch:sass', shell.task([`
-  sass -w --no-cache --sourcemap=file ${path.sass}/style.sass:${path.css}/style.css
-`]));
+gulp.task('watch:sass', ['sass'], () => {
+  gulp
+    .watch([`${path.sass}/**/*.*`], ['sass'])
+    .on('error', err => process.exit(1));
+});
+
+gulp.task('src', done => seq('babel', 'browserify', done));
 
 gulp.task('watch', done => seq('watch:src', 'watchify', done));
 

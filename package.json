@@ -48,7 +48,7 @@
 
   "scripts": {
     "setup": "mkdir ./{js,dist,css,docs,img}; touch index.html",
-    "preinstall": "npm run setup; npm install -g gulp gulp-shell babel babel-eslint browserify watchify bower styledocco protractor",
+    "preinstall": "npm run setup; npm install -g gulp gulp-shell bower protractor",
     "postinstall": "webdriver-manager update; node_modules/protractor/bin/webdriver-manager update;",
     "start": "NODE_ENV=development NODE_PATH=gulp",
 

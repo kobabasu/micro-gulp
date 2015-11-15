@@ -48,7 +48,8 @@
 
   "scripts": {
     "setup": "mkdir ./{js,dist,css,docs,img}; touch index.html",
-    "preinstall": "npm run setup; npm install -g gulp gulp-shell bower protractor",
+    "gitkeep": "touch ./js/.gitkeep; touch ./dist/.gitkeep; touch ./css/.gitkeep; touch ./docs/.gitkeep;",
+    "preinstall": "npm run setup; npm run gitleep;",
     "postinstall": "webdriver-manager update; node_modules/protractor/bin/webdriver-manager update;",
     "start": "NODE_ENV=development NODE_PATH=gulp",
 

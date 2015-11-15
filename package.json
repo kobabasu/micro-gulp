@@ -47,6 +47,8 @@
   },
 
   "scripts": {
+    "global": "npm install -g gulp gulp-shell bower protractor",
+
     "setup": "mkdir ./{js,dist,css,docs,img}; touch index.html",
     "gitkeep": "touch ./js/.gitkeep; touch ./dist/.gitkeep; touch ./css/.gitkeep; touch ./docs/.gitkeep;",
     "preinstall": "npm run setup; npm run gitleep;",

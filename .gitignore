@@ -7,4 +7,8 @@ npm-debug-log
 node_modules
 vendor
 
+js/
+dist/
+css/
+
 !.gitkeep

@@ -1,6 +1,6 @@
 {
   "name": "gulp-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "gulp minimum app",
   "main": "./gulpfile.js",
   "repository": {

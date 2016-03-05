@@ -19,8 +19,8 @@
     "!win32"
   ],
 
-  "dependencies": {
-  },
+  "dependencies": {},
+
   "devDependencies": {
     "babel-core": "*",
     "babel-preset-es2015": "*",

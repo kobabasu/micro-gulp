@@ -10,4 +10,7 @@ vendor
 js/
 docs/
 
+.htaccess
+index.html
+
 !.gitkeep

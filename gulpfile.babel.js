@@ -4,27 +4,55 @@ import gulp from 'gulp';
 import shell from '/usr/local/lib/node_modules/gulp-shell';
 
 /**
- * react
+ * for gulpfile.bable.js in parent directory
  */
-import react from './gulp/react.es6';
+// import react from './gulp/tasks/react.es6';
+// import sass from './gulp/tasks/sass.es6';
+// import karma from './gulp/tasks/karma.es6';
+// import e2e from './gulp/tasks/e2e.es6';
+
+/**
+ * for gulpfile.bable.js in this directory
+ */
+import react from './tasks/react.es6';
+import sass from './tasks/sass.es6';
+import karma from './tasks/karma.es6';
+import e2e from './tasks/e2e.es6';
+
+/**
+ * react
+ *
+ * gulp src
+ * gulp src:min
+ * gulp src:watch
+ * gulp src:docs
+ * gulp src:build
+ */
 gulp.registry(react);
 
 /**
  * sass
+ *
+ * gulp sass
+ * gulp sass:min
+ * gulp sass:watch
+ * gulp sass:docs
+ * gulp sass:build
  */
-import sass from './gulp/sass.es6';
 gulp.registry(sass);
 
 /**
  * karma
+ *
+ * gulp karma
  */
-import karma from './gulp/karma.es6';
 gulp.registry(karma);
 
 /**
  * e2e (protractor)
+ *
+ * gulp e2e
  */
-import e2e from './gulp/e2e.es6';
 gulp.registry(e2e);
 
 

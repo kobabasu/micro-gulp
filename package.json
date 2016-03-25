@@ -2,16 +2,14 @@
   "name": "gulp-app",
   "version": "0.0.2",
   "description": "gulp minimum app",
-  "main": "./gulpfile.js",
+  "main": "./gulpfile.babel.js",
   "repository": {
     "type": "git",
     "url": "//github.com/kobabasu/micro-gulp.git"
   },
-
   "keywords": [
     "gulp",
-    "gulp-shell",
-    "run-sequence"
+    "gulp-shell"
   ],
   "os": [
     "darwin",
@@ -20,22 +18,15 @@
   ],
 
   "dependencies": {},
-
   "devDependencies": {
-    "gulp": "*",
-    "run-sequence": "*"
+    "gulp": "gulpjs/gulp.git#4.0",
+    "babel-core": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*"
   },
 
   "scripts": {
     "global": "npm install -g gulp gulp-shell",
-
-    "setup": "mkdir ./{js,dist,css,docs,img}; touch index.html;",
-    "gitkeep": "touch touch ./dist/.gitkeep; touch ./css/.gitkeep;",
-    "preinstall": "npm run setup; npm run gitkeep;",
-    "start": "NODE_ENV=development NODE_PATH=gulp",
-
-    "clean:git": "find . -type d -name .git -print0 | xargs -0 rm -fr",
-
     "watch": "gulp watch",
     "build": "gulp build"
   },

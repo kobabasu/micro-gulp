@@ -8,6 +8,8 @@ class Sass extends DefaultRegistry {
   init() {
     let src  = './sass/style.sass';
     let dist = './css/style.css';
+    let lib  = './sass/lib.sass';
+    let libd = './css/lib.css';
     let min  = './css/style.min.css';
     let docs = './docs/sass';
     let name = '"css reference"';
@@ -19,6 +21,10 @@ class Sass extends DefaultRegistry {
 
     gulp.task('sass', shell.task([`
       sassc -M ${src} > ${dist} -m ${dist}
+    `]));
+
+    gulp.task('sass:lib', shell.task([`
+      sassc -t compressed -M ${lib} > ${libd} -m ${libd}
     `]));
 
     gulp.task('sass:min', shell.task([`

@@ -8,7 +8,8 @@ node_modules
 vendor
 
 js/
-docs/
+docs/src/
+docs/sass/
 
 .htaccess
 index.html

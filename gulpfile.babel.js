@@ -3,69 +3,40 @@
 import gulp from 'gulp';
 import shell from '/usr/local/lib/node_modules/gulp-shell';
 
-/**
- * for gulpfile.bable.js in parent directory
+/*
+ * import tasks
  */
-// import react from './gulp/tasks/react.es6';
-// import sass from './gulp/tasks/sass.es6';
-// import karma from './gulp/tasks/karma.es6';
-// import e2e from './gulp/tasks/e2e.es6';
+// import react   from './src/gulp/tasks/react.es6';
+// import sass    from './sass/gulp/tasks/sass.es6';
+// import karma   from './test/gulp/tasks/karma.es6';
+// import e2e     from './e2e/gulp/tasks/e2e.es6';
+// import manual  from './manual/gulp/tasks/e2e.es6';
+// import specs   from './specs/gulp/tasks/e2e.es6';
+// import schema  from './schema/gulp/tasks/e2e.es6';
 
-/**
- * for gulpfile.bable.js in this directory
+// gulp.registry(react);
+// gulp.registry(sass);
+// gulp.registry(karma);
+// gulp.registry(e2e);
+// gulp.registry(manual);
+// gulp.registry(specs);
+// gulp.registry(schema);
+
+/*
+ * import admin tasks
  */
-import react from './tasks/react.es6';
-import sass from './tasks/sass.es6';
-import karma from './tasks/karma.es6';
-import e2e from './tasks/e2e.es6';
+// import admin_react   from './admin/src/gulp/tasks/react.es6';
+// import admin_sass    from './admin/sass/gulp/tasks/sass.es6';
+// import admin_karma   from './admin/test/gulp/tasks/karma.es6';
+// import admin_e2e     from './admin/e2e/gulp/tasks/e2e.es6';
+// import admin_manual  from './admin/manual/gulp/tasks/karma.es6';
+// import admin_specs   from './admin/specs/gulp/tasks/e2e.es6';
+// import admin_schema  from './admin/schema/gulp/tasks/e2e.es6';
 
-/**
- * react
- *
- * gulp src
- * gulp src:min
- * gulp src:watch
- * gulp src:docs
- * gulp src:build
- */
-gulp.registry(react);
-
-/**
- * sass
- *
- * gulp sass
- * gulp sass:min
- * gulp sass:watch
- * gulp sass:docs
- * gulp sass:build
- */
-gulp.registry(sass);
-
-/**
- * karma
- *
- * gulp karma
- */
-gulp.registry(karma);
-
-/**
- * e2e (protractor)
- *
- * gulp e2e
- */
-gulp.registry(e2e);
-
-
-/**
- * gulp watch
- */
-gulp.task('watch', shell.task([`
-  tput setaf 36 && echo '\n  gulp watch: empty task. \n'
-`]));
-
-/**
- * gulp build
- */
-gulp.task('build', shell.task([`
-  tput setaf 36 && echo '\n  gulp build: empty task. \n'
-`]));
+// gulp.registry(admin_react);
+// gulp.registry(admin_sass);
+// gulp.registry(admin_karma);
+// gulp.registry(admin_e2e);
+// gulp.registry(admin_manual);
+// gulp.registry(admin_specs);
+// gulp.registry(admin_schema);

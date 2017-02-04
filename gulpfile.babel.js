@@ -10,7 +10,7 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
 // import sass    from './sass/gulp/tasks/sass.es6';
 // import karma   from './test/gulp/tasks/karma.es6';
 // import e2e     from './e2e/gulp/tasks/e2e.es6';
-// import manual  from './manual/gulp/tasks/e2e.es6';
+// import specs  from './specs/gulp/tasks/e2e.es6';
 // import specs   from './specs/gulp/tasks/e2e.es6';
 // import schema  from './schema/gulp/tasks/e2e.es6';
 
@@ -18,7 +18,7 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
 // gulp.registry(sass);
 // gulp.registry(karma);
 // gulp.registry(e2e);
-// gulp.registry(manual);
+// gulp.registry(specs);
 // gulp.registry(specs);
 // gulp.registry(schema);
 
@@ -29,7 +29,7 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
 // import admin_sass    from './admin/sass/gulp/tasks/sass.es6';
 // import admin_karma   from './admin/test/gulp/tasks/karma.es6';
 // import admin_e2e     from './admin/e2e/gulp/tasks/e2e.es6';
-// import admin_manual  from './admin/manual/gulp/tasks/karma.es6';
+// import admin_specs  from './admin/specs/gulp/tasks/karma.es6';
 // import admin_specs   from './admin/specs/gulp/tasks/e2e.es6';
 // import admin_schema  from './admin/schema/gulp/tasks/e2e.es6';
 
@@ -37,6 +37,6 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
 // gulp.registry(admin_sass);
 // gulp.registry(admin_karma);
 // gulp.registry(admin_e2e);
-// gulp.registry(admin_manual);
+// gulp.registry(admin_specs);
 // gulp.registry(admin_specs);
 // gulp.registry(admin_schema);

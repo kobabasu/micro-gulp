@@ -13,13 +13,6 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
 // import specs   from './specs/gulp/tasks/specs.es6';
 // import schema  from './schema/gulp/tasks/schema.es6';
 
-// gulp.registry(react);
-// gulp.registry(sass);
-// gulp.registry(karma);
-// gulp.registry(e2e);
-// gulp.registry(specs);
-// gulp.registry(schema);
-
 /*
  * import admin tasks
  */
@@ -29,6 +22,7 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
 // import admin_e2e     from './admin/e2e/gulp/tasks/e2e.es6';
 // import admin_specs   from './admin/specs/gulp/tasks/specs.es6';
 // import admin_schema  from './admin/schema/gulp/tasks/schema.es6';
+
 
 // gulp.registry(admin_react);
 // gulp.registry(admin_sass);

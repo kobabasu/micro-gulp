@@ -52,33 +52,16 @@ mv gulp/.babelrc ./
 1. `cd e2e`
 1. micro-protractorのREADME.mdを参照しinstall
 
+### specs
+1. `git clone git@github.com-kobabasu:kobabasu/micro-specs.git specs`
+1. `cd specs`
+1. micro-specsのREADME.mdを参照しinstall
+
+### schema
+1. `git clone git@github.com-kobabasu:kobabasu/micro-schema.git schema`
+1. `cd schema`
+1. micro-schemaのREADME.mdを参照しinstall
+
 ## tasks
-各タスクはファイル別に分割されている
-
-### react
-react.es6
-
-* gulp src
-* gulp src:min
-* gulp src:watch
-* gulp src:docs
-* gulp src:build
-
-### sass
-sass.es6
-
-* gulp sass
-* gulp sass:min
-* gulp sass:watch
-* gulp sass:docs
-* gulp sass:build
-
-### karma
-karma.es6
-
-* gulp karma
-
-### e2e (protractor)
-e2e.es6
-
-* gulp e2e
+各タスクは各レポジトリ内のgulp/tasks内にある。  
+`gulp --tasks`で確認

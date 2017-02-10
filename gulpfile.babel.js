@@ -16,6 +16,7 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
 
 // gulp.registry(react);
 // gulp.registry(sass);
+// gulp.registry(postcss);
 // gulp.registry(karma);
 // gulp.registry(e2e);
 // gulp.registry(specs);
@@ -35,6 +36,7 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
 
 // gulp.registry(admin_react);
 // gulp.registry(admin_sass);
+// gulp.registry(admin_postcss);
 // gulp.registry(admin_karma);
 // gulp.registry(admin_e2e);
 // gulp.registry(admin_specs);

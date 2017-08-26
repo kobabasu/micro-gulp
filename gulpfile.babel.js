@@ -8,7 +8,9 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
  */
 // import react   from './src/gulp/tasks/react.es6';
 // import sass    from './sass/gulp/tasks/sass.es6';
+// import postcss from './postcss/gulp/tasks/postcss.es6';
 // import karma   from './test/gulp/tasks/karma.es6';
+// import mocha   from './mocha/gulp/tasks/mocha.es6';
 // import e2e     from './e2e/gulp/tasks/e2e.es6';
 // import manual  from './manual/gulp/tasks/e2e.es6';
 // import specs   from './specs/gulp/tasks/e2e.es6';
@@ -16,7 +18,9 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
 
 // gulp.registry(react);
 // gulp.registry(sass);
+// gulp.registry(postcss);
 // gulp.registry(karma);
+// gulp.registry(mocha);
 // gulp.registry(e2e);
 // gulp.registry(manual);
 // gulp.registry(specs);
@@ -27,7 +31,9 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
  */
 // import admin_react   from './admin/src/gulp/tasks/react.es6';
 // import admin_sass    from './admin/sass/gulp/tasks/sass.es6';
+// import admin_postcss from './admin/postcss/gulp/tasks/postcss.es6';
 // import admin_karma   from './admin/test/gulp/tasks/karma.es6';
+// import admin_mocha   from './admin/mocha/gulp/tasks/mocha.es6';
 // import admin_e2e     from './admin/e2e/gulp/tasks/e2e.es6';
 // import admin_manual  from './admin/manual/gulp/tasks/karma.es6';
 // import admin_specs   from './admin/specs/gulp/tasks/e2e.es6';
@@ -35,7 +41,9 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
 
 // gulp.registry(admin_react);
 // gulp.registry(admin_sass);
+// gulp.registry(admin_postcss);
 // gulp.registry(admin_karma);
+// gulp.registry(admin_mocha);
 // gulp.registry(admin_e2e);
 // gulp.registry(admin_manual);
 // gulp.registry(admin_specs);

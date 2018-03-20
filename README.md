@@ -37,20 +37,15 @@ mv gulp/.babelrc ./
 1. `cd src`
 1. micro-fluxのREADME.mdを参照しinstall
 
-### sass
-1. `git clone git@github.com-kobabasu:kobabasu/micro-sass.git sass`
-1. `cd sass`
-1. micro-sassのREADME.mdを参照しinstall
+### lib
+1. `git clone git@github.com-kobabasu:kobabasu/micro-lib.git lib`
+1. `cd lib`
+1. micro-libのREADME.mdを参照しinstall
 
-### sass
-1. `git clone git@github.com-kobabasu:kobabasu/micro-karma.git test`
-1. `cd test`
-1. micro-karmaのREADME.mdを参照しinstall
-
-### e2e
-1. `git clone git@github.com-kobabasu:kobabasu/micro-protractor.git e2e`
-1. `cd e2e`
-1. micro-protractorのREADME.mdを参照しinstall
+### postcss
+1. `git clone git@github.com-kobabasu:kobabasu/micro-postcss.git postcss`
+1. `cd postcss`
+1. micro-postcssのREADME.mdを参照しinstall
 
 ### specs
 1. `git clone git@github.com-kobabasu:kobabasu/micro-specs.git specs`

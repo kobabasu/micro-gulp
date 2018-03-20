@@ -1,17 +1,24 @@
+# common
 .DS_Store
-bower.json.tmp
-bower.json-e
-package.json-e
-npm-debug.log
-.sass-cache
-node_modules
-vendor
+node_modules/
+/vendor/
+package-lock.json
+yarn.lock
+yarn-error.log
 
-js/
-docs/src/
-docs/sass/
+# config
+package.json
+bower.json
+gulpfile.babel.js
+gulp/dir.es6
+src/lib.js
 
-.htaccess
-index.html
+# build files
+test-results.xml
+coverage/
+.nyc_output/
 
+# exclude
+
+# gitkeep
 !.gitkeep

@@ -7,6 +7,7 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
  * import tasks
  */
 // import react   from './src/gulp/tasks/react.es6';
+// import lib     from './lib/gulp/tasks/lib.es6';
 // import sass    from './sass/gulp/tasks/sass.es6';
 // import postcss from './postcss/gulp/tasks/postcss.es6';
 // import karma   from './test/gulp/tasks/karma.es6';
@@ -16,6 +17,7 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
 // import schema  from './docs/schema/gulp/tasks/schema.es6';
 
 // gulp.registry(react);
+// gulp.registry(lib);
 // gulp.registry(sass);
 // gulp.registry(postcss);
 // gulp.registry(karma);
@@ -29,6 +31,7 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
  * import admin tasks
  */
 // import admin_react   from './admin/src/gulp/tasks/react.es6';
+// import admin_lib     from './admin/lib/gulp/tasks/sass.es6';
 // import admin_sass    from './admin/sass/gulp/tasks/sass.es6';
 // import admin_postcss from './admin/postcss/gulp/tasks/postcss.es6';
 // import admin_karma   from './admin/test/gulp/tasks/karma.es6';
@@ -38,6 +41,7 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
 // import admin_schema  from './admin/docs/schema/gulp/tasks/schema.es6';
 
 // gulp.registry(admin_react);
+// gulp.registry(admin_lib);
 // gulp.registry(admin_sass);
 // gulp.registry(admin_postcss);
 // gulp.registry(admin_karma);

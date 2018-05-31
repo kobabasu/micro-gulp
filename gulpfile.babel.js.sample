@@ -6,12 +6,14 @@ import shell from '/usr/local/lib/node_modules/gulp-shell';
 /*
  * import tasks
  */
-// import react   from './src/gulp/tasks/react.es6';
-// import lib     from './lib/gulp/tasks/lib.es6';
-// import postcss from './postcss/gulp/tasks/postcss.es6';
-// import specs   from './docs/specs/gulp/tasks/specs.es6';
-// import schema  from './docs/schema/gulp/tasks/schema.es6';
+// import project   from './gulp/tasks/project.es6';
+// import react     from './src/gulp/tasks/react.es6';
+// import lib       from './lib/gulp/tasks/lib.es6';
+// import postcss   from './postcss/gulp/tasks/postcss.es6';
+// import specs     from './docs/specs/gulp/tasks/specs.es6';
+// import schema    from './docs/schema/gulp/tasks/schema.es6';
 
+// gulp.registry(project);
 // gulp.registry(react);
 // gulp.registry(lib);
 // gulp.registry(postcss);

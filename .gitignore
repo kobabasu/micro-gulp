@@ -10,6 +10,7 @@ yarn-error.log
 package.json
 bower.json
 gulpfile.babel.js
+dir.es6
 gulp/dir.es6
 src/lib.js
 
